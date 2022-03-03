@@ -1,6 +1,5 @@
 package br.com.letscode.entity;
 
-import br.com.letscode.dto.OrderDTO;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -13,13 +12,6 @@ public class OrderEntity {
     private BigDecimal value;
     private LocalDate deliveryDate;
     private String description;
-
-/*    public OrderEntity(OrderDTO orderDTO) {
-        this.product = orderDTO.getProduct();
-        this.value = orderDTO.getValue();
-        this.description = orderDTO.getDescription();
-
-    }*/
 
     public OrderEntity(){
 

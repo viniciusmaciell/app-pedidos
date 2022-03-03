@@ -7,33 +7,35 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>APP-Orders</title>
 </head>
 <body>
 
-<fieldset>
-    <legend>Products Registration Form</legend>
-    <form id="form-control" action="/orders/new-order" method="post">
-        <input type="hidden" name="id" value="${order.id}"/>
-        <label>Product</label>
-        <input type="product" name="product" value=""/>
-        <label>Description</label>
-        <input type="description" name="description" value=""/>
-        <label>Value</label>
-        <input type="number" name="value" value=""/>
-        <label>Address</label>
-        <select name="state">
-            <option value="SP">São Paulo</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="state" selected disabled>Select Address ...</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="BH">Bahia</option>
-            <option value="DF">Distrito Federal</option>
-        </select>
+<div class="d-flex justify-content-around">
+    <fieldset>
+        <legend>Products Registration Form</legend>
+        <form id="form-control" action="/orders/new-order" method="post">
+            <input type="hidden" name="id" value="${order.id}"/>
+            <label>Product</label>
+            <input type="product" name="product" value="" required/>
+            <label>Description</label>
+            <input type="description" name="description" value="" required/>
+            <label>Value</label>
+            <input type="number" name="value" value="" required/>
+            <label>Address</label>
+            <select name="state">
+                <option selected disabled>Select Address...</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="BA">Bahia</option>
+                <option value="DF">Distrito Federal</option>
+            </select>
 
-        <button class="btn btn-outline-success">Submit</button>
-    </form>
-</fieldset>
+            <button class="btn btn-outline-success">Submit</button>
+        </form>
+    </fieldset>
+</div>
 
 
 </body>
