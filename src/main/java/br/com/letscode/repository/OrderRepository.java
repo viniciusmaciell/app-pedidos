@@ -1,22 +1,23 @@
 package br.com.letscode.repository;
 
-import java.time.LocalDate;
-import java.util.*;
-
 import br.com.letscode.entity.OrderEntity;
+import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+@Repository
 public class OrderRepository {
 
     private static List<OrderEntity> list = new ArrayList<>();
 
-    public OrderEntity persist(OrderEntity product) {
+    public  OrderEntity save(OrderEntity product) {
 
         String id = UUID.randomUUID().toString();
         product.setId(id);
         list.add(product);
-
-        LocalDate deliveryDate = LocalDate.now().plusDays(10);
-        product.setDeliveryDate(deliveryDate);
 
         return product;
 

@@ -9,5 +9,6 @@ public class OrderDTO {
     private String product;
     private BigDecimal value;
     private String description;
+    private String state;
 
 }

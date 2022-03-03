@@ -14,11 +14,16 @@ public class OrderEntity {
     private LocalDate deliveryDate;
     private String description;
 
-    public OrderEntity(OrderDTO orderDTO) {
+/*    public OrderEntity(OrderDTO orderDTO) {
         this.product = orderDTO.getProduct();
         this.value = orderDTO.getValue();
         this.description = orderDTO.getDescription();
 
+    }*/
+
+    public OrderEntity(){
 
     }
+
+
 }
